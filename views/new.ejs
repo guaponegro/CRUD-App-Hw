@@ -7,11 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Cars Show Page</h1>
-  The <%= cars.name %> is <%= cars.color%>
+    <h1>New Cars Page</h1>
 
-<br>
-
-  <a href="/cars/<%=cars.id%>/edit">Edit</a>
+  <form action="/cars" method="POST">
+    Name: <input type="text" name="name"><br/>
+    Color: <input type="text" name="color"><br/>
+    <input type="submit">
+  </form>
 </body>
 </html>

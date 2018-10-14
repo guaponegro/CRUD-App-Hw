@@ -5,5 +5,5 @@ const carSchema = new mongoose.Schema ({
     color: String
 })
 
-const Cars = mongoose.model("cars", carSchema);
+const Cars = mongoose.model("Cars", carSchema);
 module.exports = Cars;

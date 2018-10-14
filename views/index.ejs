@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cars Page</h1>
+
+    <% for(let i = 0; i < cars.length; i++){ %>
+          The <a href="/cars/<%=cars[i].id%>"><%=cars[i].name %></a> is  <%=cars[i].color; %>
+      <br>
+    <!-- Edit Button -->
+    <a href="/cars/<%=cars[i].id%>/edit">Edit</a>
+
+
+    <!-- Delete Button -->
+    <form action="/cars/<%=cars[i].id%>?_method=DELETE" method="POST">
+        <input type="submit" value="delete">
+    </form>
+<% } %> 
+
+<nav>
+    <a href="/cars/new">Create a New Car</a>
+</nav>
+</body>
+</html>

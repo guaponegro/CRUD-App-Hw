@@ -7,14 +7,17 @@ require("./db/db");
 
 
 // Controller
-// const carsController = require("./controllers/carsControllers");
+const carsControllers = require("./controllers/carsControllers");
 
 // Middleware
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride("_method"));
+app.use("/cars", carsControllers);
 
 
-
+app.get("/", (req, res) => {
+    res.render("landing.ejs");
+})
 
 const port = 3000;
 app.listen(port, () => {
